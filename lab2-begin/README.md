@@ -1,5 +1,21 @@
 ## Lab 2 - REST, Spring Boot, Dependency injection
 
+
+### Spring Boot
+
+[Spring Boot](http://projects.spring.io/spring-boot/) se koristi kako bi se pojednostavila konfiguracija Spring projekata. Umesto XML konfiguracionih fajlova, koriste se anotacije u Java klasama. Takođe, na osnovu biblioteka raspoloživih na class path-u, Spring Boot automatski postavlja podrazumevanu konfiguraciju za svaku od njih. Ova konfiguracija se po potrebi može menjati. 
+
+* Obratiti pažnju na izmenjen sadržaj `pom.xml`
+* Napraviti klasu WafepaApplication u kojoj će se nalaziti početna Spring Boot konfiguracija. Klasa treba da nasledi `SpringBootServletInitializer`
+* Anotirati klasu kao `@SpringBootApplication`
+* Dodati ovoj kalsi main metodu
+```java
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(Wafepa.class, args);
+	}
+```
+* **Pokrenuti klasu kao običnu Java aplikaciju**
+
 ### REST
 
 ----
@@ -27,22 +43,6 @@ potreban samo njegov URL za vršenje CRUD operacija preko različitih HTTP metod
 ----
 
 
-### Spring Boot
-
-[Spring Boot](http://projects.spring.io/spring-boot/) se koristi kako bi se pojednostavila konfiguracija Spring projekata. Umesto XML konfiguracionih fajlova, koriste se anotacije u Java klasama. Takođe, na osnovu biblioteka raspoloživih na class path-u, Spring Boot automatski postavlja podrazumevanu konfiguraciju za svaku od njih. Ova konfiguracija se po potrebi može menjati. 
-
-* Obratiti pažnju na izmenjen sadržaj `pom.xml`
-* Napraviti klasu WafepaApplication u kojoj će se nalaziti početna Spring Boot konfiguracija. Klasa treba da nasledi `SpringBootServletInitializer`
-* Anotirati klasu kao `@SpringBootApplication`
-* Dodati ovoj kalsi main metodu
-```java
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Wafepa.class, args);
-	}
-```
-* **Pokrenuti klasu kao običnu Java aplikaciju**
-
-
 
 ### Servisi i kontroleri
 
@@ -53,7 +53,7 @@ potreban samo njegov URL za vršenje CRUD operacija preko različitih HTTP metod
 * Mapirati je na URL `api/activities` korišćenjem `@RequestMapping` anotacije
 
 ---------------------------------------
-* [Dependency Injection](http://igordejanovic.net/courses/tech/DependencyInjection.html#/) je softverski obrazac koji se koristi kako bi se olakšalo instanciranje objekata. Postoje mnoge implementacije koje se mogu koristiti nezavisno od Spring-a. U okviru Spring Framework-a, DI se koristi kako bi se dobila referenca na neku komponentu
+* [Dependency Injection](http://www.igordejanovic.net/courses/tech/dependency-injection.html) je softverski obrazac koji se koristi kako bi se olakšalo instanciranje objekata. Postoje mnoge implementacije koje se mogu koristiti nezavisno od Spring-a. U okviru Spring Framework-a, DI se koristi kako bi se dobila referenca na neku komponentu
 * Da bi Spring Dependency Injecion radio, potrebno je uključiti component-scan mehanizam. U Spring Boot, ovo podešavanje je deo anotacije `@SpringBootApplication` koju smo već primenili. 
 
 * Anotirati `InMemoryActivityService` kao `@Service`
