@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lab6-begin:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="lab6-begin-1.2.7.RELEASE.war">
+      <element id="artifact" artifact-name="lab6-begin:war exploded" />
+    </root>
+  </artifact>
+</component>
