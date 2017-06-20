@@ -1,0 +1,22 @@
+<div>
+	<h1>Activities</h1>
+	<div ng-controller="activitiesCtrl">
+		<div ng-show="!got_activities">
+			<h2>Loading...</h2>
+		</div>
+		<div ng-show="got_activities">
+			<table border="1">
+				<tr><th>Name</th></tr>
+				<tr ng-repeat="a in activities">
+					<td>
+						{{a.name}}
+					</td>
+					<td>
+						<button ng-click="deleteActivity(a.id)">Delete</button>
+						<button ng-click="editActivity(a.id)">Edit</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

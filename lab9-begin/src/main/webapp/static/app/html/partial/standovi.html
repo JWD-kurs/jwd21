@@ -1,0 +1,35 @@
+<div ng-controller="standoviCtrl">
+	<h1>Radi!</h1>
+
+	<form>
+		<label for="zakupac">Zakupac</label>
+		<input name="zakupac" ng-model="noviStand.zakupac"/><br/>
+		<label for="povrsina">Povrsina</label>
+		<input name="povrsina" ng-model="noviStand.povrsina"/><br/>
+		<label for="sajam">Sajam</label>
+		<select name="sajam" ng-model="noviStand.sajamId">
+			<option ng-repeat="sajam in sajmovi" value="{{sajam.id}}">{{sajam.naziv}}</option>
+		</select>
+		<button ng-click="addStand()">Dodaj</button>
+	</form>
+
+
+	<table border="1">
+		<tr>
+			<th>Zakupac</th>
+			<th>Povrsina</th>
+			<th>Sajam</th>
+		</tr>
+		<tr ng-repeat="stand in standovi">
+			<td>
+				{{stand.zakupac}}
+			</td>
+			<td>
+				{{stand.povrsina}}
+			</td>
+			<td>
+				{{stand.sajamNaziv}}
+			</td>
+		</tr>
+	</table>
+</div>
