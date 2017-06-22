@@ -1,0 +1,10 @@
+<div ng-controller="addActivityCtrl">
+	<h2>Add activity works!</h2>
+	<form  class="form-inline">
+		<div class="form-group">
+			<label for="activityName">Name</label>
+			<input type="text" name="activityName" ng-model="newActivity.name"/>			
+		</div>
+		<button ng-click="addActivity()">Add</button>
+	</form>
+</div>

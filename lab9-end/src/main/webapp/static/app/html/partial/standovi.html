@@ -1,0 +1,64 @@
+<div ng-controller="standoviCtrl">
+	<h1>Radi!</h1>
+
+	<form>
+		<div class="form-group">
+			<label for="zakupac">Zakupac</label>
+			<input name="zakupac" ng-model="noviStand.zakupac"/>
+		</div>
+		<div class="form-group">
+			<label for="povrsina">Povrsina</label>
+			<input name="povrsina" ng-model="noviStand.povrsina"/>
+		</div>
+		<div class="form-group">
+			<label for="sajam">Sajam</label>
+			<select name="sajam" ng-model="noviStand.sajamId">
+				<option ng-repeat="sajam in sajmovi" value="{{sajam.id}}">{{sajam.naziv}}</option>
+			</select>
+		</div>
+		<button ng-click="addStand()">Dodaj</button>
+	</form>
+
+	<br/>
+
+	<form>
+		<div class="form-group">
+			<label for="zakupac">Zakupac</label>
+			<input name="zakupac" ng-model="trazeniStand.zakupac"/>
+		</div>
+		<div class="form-group">
+			<label for="minP">Minimalna provrsina</label>
+			<input name="minP" ng-model="trazeniStand.minP"/>
+		</div>
+		<div class="form-group">
+			<label for="maxP">Maksimalna povrsina</label>
+			<input name="maxP" ng-model="trazeniStand.maxP"/>
+		</div>
+		<button ng-click="filter()">Filtriraj</button>
+	</form>
+
+	<br/>
+	<div class="btn-group pull-right">
+		<button ng-click="changePage(-1)" ng-disabled="pageNum == 0" class="btn btn-primary">Back</button>
+		<button ng-click="changePage(1)" ng-disabled="pageNum == totalPages-1" class="btn btn-primary">Next</button>
+	</div>
+
+	<table class="table table-striped">
+		<tr>
+			<th>Zakupac</th>
+			<th>Povrsina</th>
+			<th>Sajam</th>
+		</tr>
+		<tr ng-repeat="stand in standovi">
+			<td>
+				{{stand.zakupac}}
+			</td>
+			<td>
+				{{stand.povrsina}}
+			</td>
+			<td>
+				{{stand.sajamNaziv}}
+			</td>
+		</tr>
+	</table>
+</div>
