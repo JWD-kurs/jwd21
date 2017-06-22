@@ -22,7 +22,7 @@ Označava da će vredost biti automatski generisana. Podrazumevano ponašanje je
 
 Označava da će kolona na koju se mapira polje biti pirmarni ključ u bazi.
 
-[@Table](https://docs.oracle.com/javaee/7/api/javax/persistence/OneToMany.html)
+[@OneToMany](https://docs.oracle.com/javaee/7/api/javax/persistence/OneToMany.html)
 
 Označava da je jedan objekat ove klase u vezi sa više objekata druge klase.
 
@@ -88,4 +88,4 @@ Omogućava da pročitamo objekat koji je došao u telu HTTP zahteva.
 ## Validacija
 
 https://docs.spring.io/spring/docs/current/spring-framework-reference/html/validation.html
-
+http://docs.jboss.org/ejb3/app-server/HibernateAnnotations/api/org/hibernate/validator/package-summary.html
